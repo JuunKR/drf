@@ -2,7 +2,8 @@ import json
 
 import googlemaps
 import pandas as pd
-from rest_framework.common.abstracts import PrinterBase, ReaderBase
+from rest_framework.common.abstracts import PrinterBase, ReaderBase, ScraperBase
+from selenium import webdriver
 
 class Printer(PrinterBase):
 
@@ -31,5 +32,13 @@ class Reader(ReaderBase):
 
     def gmaps(self) -> object:
         return googlemaps.Client(key='AIzaSyDd6wRo4mYvX4V1jV2FTfqWXJAdO7CDjiI')
+
+class Scraper(ScraperBase):
+
+    def driver(self) -> object:
+        return webdriver.Chrome('C:/Program Files/Google/Chrome/chromedriver')
+
+    def auto_login(self):
+        pass
 
 

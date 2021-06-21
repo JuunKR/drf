@@ -5,6 +5,7 @@ from dataclasses import dataclass
 class FileDTO(object):
     context: str
     fname: str
+    url : str
     dframe: object
 
     @property
@@ -18,6 +19,12 @@ class FileDTO(object):
 
     @fname.setter
     def fname(self, fname): self._fname = fname
+
+    @property
+    def url(self) -> str: return self._url
+
+    @url.setter
+    def url(self, url): self._url = url
 
     @property
     def dframe(self) -> object: return self._dframe
