@@ -124,7 +124,7 @@ class Service(Reader):
         for i in stations:
             if p.match(stations['가격'][i]):
                 temp_stations.append(stations['가격'][i])
-            
+
         # 12       성동구  성동구  성동구  성동구  성동구  성동구
 
 
